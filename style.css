@@ -1,0 +1,179 @@
+:root {
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #EADDFF;
+    --md-sys-color-on-primary-container: #21005D;
+    --md-sys-color-secondary: #625B71;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #E8DEF8;
+    --md-sys-color-on-secondary-container: #1D192B;
+    --md-sys-color-background: #FFFBFE;
+    --md-sys-color-on-background: #1C1B1F;
+    --md-sys-color-surface: #FFFBFE;
+    --md-sys-color-on-surface: #1C1B1F;
+    --md-sys-color-surface-variant: #E7E0EC;
+    --md-sys-color-on-surface-variant: #49454F;
+    --md-sys-color-outline: #79747E;
+
+    /* Expressive Customizations */
+    --md-ref-typeface-brand: 'Roboto', sans-serif;
+    --md-ref-typeface-plain: 'Roboto', sans-serif;
+    --border-radius-large: 24px;
+    --border-radius-medium: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --md-sys-color-primary: #D0BCFF;
+        --md-sys-color-on-primary: #381E72;
+        --md-sys-color-primary-container: #4F378B;
+        --md-sys-color-on-primary-container: #EADDFF;
+        --md-sys-color-secondary: #CCC2DC;
+        --md-sys-color-on-secondary: #332D41;
+        --md-sys-color-secondary-container: #4A4458;
+        --md-sys-color-on-secondary-container: #E8DEF8;
+        --md-sys-color-background: #1C1B1F;
+        --md-sys-color-on-background: #E6E1E5;
+        --md-sys-color-surface: #1C1B1F;
+        --md-sys-color-on-surface: #E6E1E5;
+        --md-sys-color-surface-variant: #49454F;
+        --md-sys-color-on-surface-variant: #CAC4D0;
+        --md-sys-color-outline: #938F99;
+    }
+}
+
+body {
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
+    font-family: var(--md-ref-typeface-plain);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3.5rem; /* Display Small/Medium for impact */
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--md-sys-color-primary);
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--md-sys-color-on-surface-variant);
+    max-width: 60ch;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top right, var(--md-sys-color-primary-container), transparent 40%);
+    padding: 4rem 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    background-color: var(--md-sys-color-primary);
+    border-radius: 32px; /* Super-ellipse ish */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--md-sys-color-on-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 2rem;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Features Grid */
+.features {
+    padding: 6rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: var(--md-sys-color-surface-variant);
+    padding: 2rem;
+    border-radius: var(--border-radius-large);
+    transition: background-color 0.2s;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--md-sys-color-on-surface);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--md-sys-color-on-surface-variant);
+    border-top: 1px solid var(--md-sys-color-outline);
+    background-color: var(--md-sys-color-surface);
+}
+
+footer a {
+    color: var(--md-sys-color-primary);
+    text-decoration: none;
+    margin: 0 1rem;
+}

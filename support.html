@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - WorkScribe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="container hero-content">
+            <h1>Support Center</h1>
+            <p>Guides, FAQs, and Troubleshooting</p>
+        </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 4rem;">
+
+        <!-- Contact Card -->
+        <div class="feature-card"
+            style="text-align: center; margin-bottom: 3rem; background-color: var(--md-sys-color-primary-container);">
+            <h2 style="color: var(--md-sys-color-on-primary-container); margin-top: 0;">Contact Developer</h2>
+            <p style="color: var(--md-sys-color-on-primary-container); margin: 0 auto 1.5rem auto;">
+                Found a bug or have a feature request? We'd love to hear from you.
+            </p>
+            <a href="mailto:dev.workscribe@gmail.com" class="download-btn"
+                style="background-color: var(--md-sys-color-on-primary-container); color: var(--md-sys-color-primary-container);">
+                Email dev.workscribe@gmail.com
+            </a>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+
+        <div class="features-grid">
+            <!-- Data & Security -->
+            <div class="feature-card">
+                <h3>💾 How do I backup my data?</h3>
+                <p>Go to <strong>Settings > Backup & Restore</strong>. Tap "Create Backup". This generates a full ZIP
+                    file containing your database and images.
+                    <br><br><strong>Important:</strong> Save this ZIP file to a safe place (Google Drive, Dropbox, or
+                    your PC). Since we don't have cloud servers, this is your only way to recover data if you lose your
+                    phone.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>� How do I restore a backup?</h3>
+                <p>Re-install the app, go to <strong>Settings > Backup & Restore</strong>, and tap "Restore Backup".
+                    Select the ZIP file you previously created. The app will restart with all your data restored.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📱 Can I sync across multiple devices?</h3>
+                <p>Currently, WorkScribe is designed as a standalone offline app. To move data between devices, you must
+                    manually Transfer the backup ZIP file.</p>
+            </div>
+
+            <!-- Features -->
+            <div class="feature-card">
+                <h3>� How do I export my work logs?</h3>
+                <p>Go to <strong>Settings > Export Data</strong>. You have two options:
+                    <br>• <strong>PDF:</strong> Great for sending reports to clients or managers.
+                    <br>• <strong>CSV:</strong> Great for importing into Excel or Google Sheets for custom analysis.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📝 What text formatting is supported?</h3>
+                <p>We support standard Markdown! You can make text **bold**, *italic*, or create lists using bullets
+                    (-). The editor toolbar also provides quick buttons for these actions.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌗 Does it have Dark Mode?</h3>
+                <p>Yes! WorkScribe follows your system theme by default, but you can force Light or Dark mode in
+                    <strong>Settings > Appearance</strong>.</p>
+            </div>
+
+            <!-- Troubleshooting -->
+            <div class="feature-card">
+                <h3>🔒 App Lock isn't working</h3>
+                <p>WorkScribe relies on your phone's system security. If your fingerprint or face unlock isn't working
+                    in the app, please try deleting and re-registering your biometrics in your Android Phone Settings.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>❓ I found a bug, what should I do?</h3>
+                <p>Please email us at <a href="mailto:dev.workscribe@gmail.com">dev.workscribe@gmail.com</a> with:
+                    <br>1. Your phone model.
+                    <br>2. Android version.
+                    <br>3. A screenshot or description of what happened.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html">Back to Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
