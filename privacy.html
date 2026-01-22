@@ -20,85 +20,88 @@
 
     <section class="container" style="padding-bottom: 4rem;">
         <div class="feature-card" style="background: transparent; padding: 0;">
-            <p><strong>Last Updated:</strong> January 20, 2026</p>
+            <p><strong>Last Updated:</strong> January 23, 2026</p>
 
             <h2>1. Introduction</h2>
             <p>WorkScribe ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains
                 how our application functions regarding your personal data. <strong>The core philosophy of WorkScribe is
                     "Local First".</strong> We designed the app so that your data remains on your device and is not
-                collected, sold, or transmitted to us.</p>
+                collected or transmitted to us by default.</p>
 
             <h2>2. Data Collection & Usage</h2>
-            <p><strong>We do not collect any personal data.</strong></p>
-            <p>All entries, images, project details, and statistics created within the app are stored locally on your
-                device's internal storage in a secure database. We do not operate a cloud server, and we have no access
-                to your information.</p>
+            <p><strong>We do not collect any personal data on our own servers.</strong></p>
+            <p>All entries, images, project details, tasks, and statistics created within the app are stored locally on
+                your
+                device. If you choose to enable Hybrid Backup or Sync, your data is stored securely in your own private
+                Google Drive account.</p>
 
-            <h2>3. App Permissions</h2>
-            <p>WorkScribe requests the following permissions for the sole purpose of providing app functionality:</p>
+            <h2>3. App Permissions & Features</h2>
+            <p>WorkScribe requests the following permissions to provide app functionality:</p>
 
             <div style="margin-left: 1rem;">
                 <h3>📍 Location (Optional)</h3>
-                <p><strong>Rationale:</strong> Used to attach a geotag (latitude/longitude) to a work entry.</p>
-                <p><strong>Usage:</strong> The app only accesses location when you tap the "Add Location" button. This
-                    data is saved locally with your entry and is displayed on a map using the Google Maps SDK.</p>
+                <p><strong>Rationale:</strong> Used to attach a geotag to a work entry.</p>
+                <p><strong>Usage:</strong> The app only accesses location when you choose to "Add Location". This
+                    data is saved locally and is displayed on a map using the Google Maps SDK.</p>
 
-                <h3>📸 Storage & Photos</h3>
-                <p><strong>Rationale:</strong> Required to attach images to your entries and to save Backup files.</p>
-                <p><strong>Usage:</strong> Images you select are copied to the app's local private storage. Backups are
-                    written to your device's storage so you can keep them safe.</p>
+                <h3>📸 Storage & Media</h3>
+                <p><strong>Rationale:</strong> Required to attach images to your entries and to synchronize media with
+                    your cloud backup.</p>
+                <p><strong>Usage:</strong> Images you select are stored locally and encrypted in transit during
+                    synchronization to your Google Drive.</p>
 
                 <h3>🔒 Biometrics</h3>
                 <p><strong>Rationale:</strong> Used for the "App Lock" feature.</p>
-                <p><strong>Usage:</strong> The app uses the Android Biometric API to authenticate you. Fingerprint/Face
-                    data is processed entirely by the Android Operating System; WorkScribe merely receives a "Success"
-                    or "Fail" signal.</p>
+                <p><strong>Usage:</strong> The app uses the Android Biometric API for secure local authentication.</p>
+
+                <h3>⏰ Exact Alarms</h3>
+                <p><strong>Rationale:</strong> Required for Task reminders and notifications.</p>
+                <p><strong>Usage:</strong> Used to trigger notifications for your scheduled tasks at the precise time
+                    requested.</p>
             </div>
 
-            <h2>4. Third-Party Services & Data Collection</h2>
+            <h2>4. Third-Party Services</h2>
             <p>While WorkScribe itself does not collect your data, the app utilizes services provided by **Google**
                 which may collect information independently when you interact with them.</p>
 
             <div style="margin-left: 1rem;">
+                <h3>Google Drive & Sign-In</h3>
+                <p>We use Google Sign-In and the Drive API for the mandatory backup and optional sync features.</p>
+                <p><strong>What is shared?</strong> Your email address is used for authentication. Your journal data is
+                    stored in a hidden, app-specific folder in your private Google Drive which we cannot access without
+                    your active session.</p>
+
                 <h3>Google Maps SDK</h3>
-                <p>We use the Google Maps SDK to allow you to view your location-tagged entries on a map.</p>
-                <p><strong>What is collected?</strong> When you view the map, your device connects directly to Google's
-                    servers. Google may collect:</p>
-                <ul>
-                    <li><strong>Technical Information:</strong> IP address, device identifiers, and operating system
-                        version.</li>
-                    <li><strong>Location Data:</strong> Exact location data is processed by Google to render the map
-                        tiles relevant to your position.</li>
-                    <li><strong>Interaction Data:</strong> Search queries or map interactions (zooming/panning).</li>
-                </ul>
-                <p>This collection is governed entirely by Google's Privacy Policy. We encourage you to review their
-                    terms here: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+                <p>Usage is governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+                    Google may collect IP addresses and interaction data to render map tiles.</p>
             </div>
 
-            <p style="margin-top: 1rem;"><strong>No Other Analytics:</strong> Apart from the map functionality described
-                above, we <strong>do not</strong> include any other third-party analytics (like Firebase Analytics,
-                Facebook SDK, or Mixpanel) or crash reporting tools. Your journal entries and notes are never
-                transmitted to third parties.</p>
+            <h2>5. Project Collaboration & Content Sharing</h2>
+            <p>When using the Project Collaboration feature, you may invite other users to join a project. In this mode,
+                the text and images within that project are shared with the invited participants. You maintain control
+                over who has access and can revoke invitations at any time.</p>
 
-            <h2>5. Data Safety & Retention</h2>
+            <h2>6. Data Safety, Retention & Deletion</h2>
             <ul>
-                <li><strong>Retention:</strong> Since data is stored locally, it is retained indefinitely on your device
-                    until you delete the app or clear its data.</li>
-                <li><strong>Deletion:</strong> You can delete individual entries or all app data via your device
-                    settings. Uninstalling the app permanently removes all data associated with it.</li>
-                <li><strong>Encryption:</strong> Data is stored in the app's private directory, which is
-                    sandbox-protected by the Android OS and inaccessible to other apps.</li>
+                <li><strong>Retention:</strong> Local data is retained until you delete the app. Cloud data is retained
+                    in your Google Drive until you choose to delete it.</li>
+                <li><strong>Encryption:</strong> All data transmitted for backup or sync is encrypted in transit.</li>
+                <li><strong>Data Deletion (Right to be Forgotten):</strong>
+                    <p>Users have full control over their data deletion. To delete all data:</p>
+                    <ol>
+                        <li>Delete individual entries or projects within the app.</li>
+                        <li>Uninstall the app to remove all local data.</li>
+                        <li>Delete the "WorkScribe" folder from your Google Drive account.</li>
+                        <li>You can request explicit data deletion or account disconnection at <a
+                                href="https://devworkscribe.github.io/workscribe-web/privacy.html">this page</a> or by
+                            contacting us via email.</li>
+                    </ol>
+                </li>
             </ul>
 
-            <h2>6. Children's Privacy</h2>
+            <h2>7. Children's Privacy</h2>
             <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally
-                identifiable information from anyone under the age of 13. Since our app does not collect data, we do not
-                hold data on children.</p>
-
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page
-                periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on
-                this page.</p>
+                identifiable information from anyone under the age of 13.</p>
 
             <h2>8. Contact Us</h2>
             <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
