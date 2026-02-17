@@ -1,60 +1,48 @@
-# How to Update Your Website (App + Website in One Repo)
+# How to Configure Your Custom Domain (workscribe.app)
 
-Since you are using one repository for both your **App Code** and **Website**, and you already have files on GitHub, follow these steps to add the website without messing up your app.
+Since you are hosting on GitHub Pages and want to use `workscribe.app`, follow these steps.
 
-## Step 1: Prepare the "docs" folder
-I have already renamed your `website` folder to `docs`. This is special. GitHub Pages loves the `docs` folder. It allows you to keep your main app code in the root, and just the website files in `docs`.
+## Step 1: Update Your Code (I have done this)
+I have already:
+1.  Created a `CNAME` file with `workscribe.app` in it.
+2.  Updated `index.html` with your Play Store link.
 
-## Step 2: Open Terminal
-1.  Open Command Prompt or PowerShell.
-2.  Navigate to your project folder:
-    ```powershell
-    cd e:\journal
-    ```
-
-## Step 3: Link and Push (If you haven't locally)
-**Important:** If you see "fatal: not a git repository" when you run git commands, it means your computer doesn't know about the GitHub files yet.
-
-Run these exact commands to connect everything:
-
+**You just need to push these changes:**
 ```powershell
-# 1. Initialize Git locally
-git init
-
-# 2. Add ONLY the website files (Ignore the App for now)
-git add docs
-
-# 3. Commit the changes
-git commit -m "Add website files"
-
-# 4. Link to your GitHub (Skip if already linked)
-# Replace [YOUR_URL] with your actual GitHub URL
-git remote add origin [YOUR_URL]
-# Example: git remote add origin https://github.com/devworkscribe/workscribe.git
-
-# 5. Push to GitHub
-# If you get an error saying "updates were rejected", run: git pull origin main --allow-unrelated-histories
-git push -u origin main
-```
-
-## Step 4: Turn on the Website (The Magic Step)
-1.  Go to your repository on GitHub.com (`https://github.com/devworkscribe/workscribe`).
-2.  Click **Settings** (top right tab).
-3.  Click **Pages** (left sidebar).
-4.  Under **Build and deployment**:
-    *   **Source:** Deploy from a branch
-    *   **Branch:** Select `main` (or master).
-    *   **Folder:** Select `/docs` (Change this from /(root) to /docs).
-5.  Click **Save**.
-
-## Done!
-Your website will be live at: `https://devworkscribe.github.io/workscribe/`
-
-## How to Update the Website later
-Whenever you edit files in the `docs` folder (like changing text in index.html):
-
-```powershell
-git add docs
-git commit -m "Update website text"
+cd e:\workscribe-web
+git add .
+git commit -m "Add CNAME and Play Store link"
 git push
 ```
+
+## Step 2: Configure Hostinger DNS
+Go to your Hostinger Domain Dashboard for `workscribe.app` and find the **DNS / Nameservers** section.
+
+**Delete any existing A or CNAME records that might conflict (like parking pages).**
+
+Then, add these **5 records**:
+
+### 1. A Records (Point to GitHub)
+Add these 4 separate A records. They all point `@` to GitHub's servers.
+
+| Type | Name | Points to | TTL |
+| :--- | :--- | :--- | :--- |
+| A | @ | 185.199.108.153 | 3600 |
+| A | @ | 185.199.109.153 | 3600 |
+| A | @ | 185.199.110.153 | 3600 |
+| A | @ | 185.199.111.153 | 3600 |
+
+### 2. CNAME Record (For 'www')
+This ensures `www.workscribe.app` also works.
+
+| Type | Name | Points to | TTL |
+| :--- | :--- | :--- | :--- |
+| CNAME | www | workscribe.app | 3600 |
+
+## Step 3: Verify in GitHub
+1.  Go to your GitHub Repository > **Settings** > **Pages**.
+2.  Under **Custom domain**, you should see `workscribe.app`.
+3.  It might say "DNS check in progress". Wait 15-30 minutes.
+4.  Once green, check the box **"Enforce HTTPS"** to make your site secure.
+
+Your site will be live at `https://workscribe.app`.
