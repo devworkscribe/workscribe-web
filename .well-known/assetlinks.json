@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.workscribe.app",
+      "sha256_cert_fingerprints": [
+        "8A:D6:A7:70:80:0D:B6:E7:90:B1:0A:69:A2:31:47:07:D3:FB:B0:F7:C5:BB:B3:6E:A5:FC:22:79:14:3D:C1:FC"
+      ]
+    }
+  }
+]
